@@ -9,6 +9,7 @@ public class POIObject {
 	public static final String POI_TYPE_FIELD = "poi_type";
 	public static final String POI_URL_FIELD = "poi_url";
 	public static final String POI_ADDRESS_FIELD = "poi_address";
+	public static final String POI_SOURCE_FIELD = "poi_source";
 	
 	private String poi_vistor_rating;
 	private String poi_rating_summary;
@@ -17,6 +18,7 @@ public class POIObject {
 	private String poi_type;
 	private String poi_url;
 	private String poi_address;
+	private String poi_source;
 	
 	public POIObject(String poi_vistor_rating, String poi_rating_summary, String poi_title, String poi_telephone, String poi_type, String poi_url, String poi_address){
 		this.poi_vistor_rating = poi_vistor_rating;
@@ -69,6 +71,14 @@ public class POIObject {
 	}
 	public void setPoi_address(String poi_address) {
 		this.poi_address = poi_address;
+	}
+
+	public String getPoi_source() {
+		return poi_source;
+	}
+
+	public void setPoi_source(String poi_source) {
+		this.poi_source = poi_source;
 	}
 
 }

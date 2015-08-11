@@ -19,6 +19,7 @@ import org.jsoup.select.Elements;
 
 import idv.jiaming.models.CommentObject;
 import idv.jiaming.models.POIObject;
+import idv.jiaming.models.SourceEnum;
 
 public class PracticeThreeMapper extends Mapper<Object, Text, ImmutableBytesWritable, Put>{
 
@@ -58,6 +59,7 @@ public class PracticeThreeMapper extends Mapper<Object, Text, ImmutableBytesWrit
 				poiPut.add(poiFamily, POIObject.POI_TYPE_FIELD.getBytes(), Bytes.toBytes(poiObj.getPoi_type()));
 				poiPut.add(poiFamily, POIObject.POI_URL_FIELD.getBytes(), Bytes.toBytes(poiObj.getPoi_url()));
 				poiPut.add(poiFamily, POIObject.POI_ADDRESS_FIELD.getBytes(), Bytes.toBytes(poiObj.getPoi_address()));
+				poiPut.add(poiFamily, POIObject.POI_SOURCE_FIELD.getBytes(), Bytes.toBytes(SourceEnum.TRIP_ADVISOR.getValue()));
 				poiTable.put(poiPut);
 			}
 			catch(Exception e){
